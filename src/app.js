@@ -1,0 +1,35 @@
+import { clues, lessons, levels } from "./data.js";
+
+const key = "prize2pride-japanese-tunisian-progress";
+let activeLevel = "A0";
+let activeLessonId = "a0-hello";
+let state = JSON.parse(localStorage.getItem(key) || "{\"completed\":[],\"drafts\":{}}");
+const $ = (id) => document.getElementById(id);
+const persist = () => localStorage.setItem(key, JSON.stringify(state));
+const lesson = () => lessons.find((item) => item.id === activeLessonId);
+
+function renderLevels() {
+  $("levels").innerHTML = levels.map((level) => `<button role="tab" aria-selected="${activeLevel === level.id}" class="${activeLevel === level.id ? "active" : ""}" data-level="${level.id}"><b>${level.label}</b><span>${level.title}</span><small dir="rtl">${level.arabic}</small></button>`).join("");
+  document.querySelectorAll("[data-level]").forEach((button) => button.addEventListener("click", () => { activeLevel = button.dataset.level; activeLessonId = lessons.find((item) => item.level === activeLevel && !state.completed.includes(item.id))?.id || lessons.find((item) => item.level === activeLevel).id; render(); }));
+}
+function renderLessonButtons() {
+  $("lesson-buttons").innerHTML = lessons.filter((item) => item.level === activeLevel).map((item) => `<button class="lesson-button ${item.id === activeLessonId ? "active" : ""}" data-lesson="${item.id}">${state.completed.includes(item.id) ? "✓ " : ""}${item.title}<small>${item.arabic}</small></button>`).join("");
+  document.querySelectorAll("[data-lesson]").forEach((button) => button.addEventListener("click", () => { activeLessonId = button.dataset.lesson; render(); }));
+}
+function renderWorkspace() {
+  const item = lesson();
+  $("level-title").textContent = `${activeLevel} · ${levels.find((level) => level.id === activeLevel).title}`;
+  $("lesson-context").textContent = item.context;
+  $("lesson-title").textContent = item.title;
+  $("lesson-arabic").textContent = item.arabic;
+  $("dialogue").innerHTML = item.turns.map(([speaker, japanese, support]) => `<p><b>${speaker}</b><span lang="ja">${japanese}</span><small>${support}</small></p>`).join("");
+  $("reflection").value = state.drafts[item.id] || "";
+  $("complete-lesson").textContent = state.completed.includes(item.id) ? "✓ この端末に記録済み · مسجّلة في الجهاز" : "完成として記録 · سجّلها كمكمّلة";
+}
+function renderClues() { $("clue-options").innerHTML = clues.map((clue, index) => `<button data-clue="${index}">${index + 1}. ${clue}</button>`).join(""); document.querySelectorAll("[data-clue]").forEach((button) => button.addEventListener("click", () => { $("clue-response").textContent = "اخترت إشارة. ارجع للنص وفسّر بكلماتك علاش لفتت انتباهك. · You selected a clue. Return to the text and explain why it matters."; })); }
+function render() { renderLevels(); renderLessonButtons(); renderWorkspace(); renderClues(); }
+$("speak-dialogue").addEventListener("click", () => { const utterance = new SpeechSynthesisUtterance(lesson().turns.map((turn) => turn[1]).join(" ")); utterance.lang = "ja-JP"; speechSynthesis.cancel(); speechSynthesis.speak(utterance); });
+$("complete-lesson").addEventListener("click", () => { if (!state.completed.includes(activeLessonId)) state.completed.push(activeLessonId); persist(); render(); });
+$("save-reflection").addEventListener("click", () => { state.drafts[activeLessonId] = $("reflection").value; persist(); $("save-status").textContent = "この端末に保存しました · تخزّنت في جهازك"; });
+$("start-learning").addEventListener("click", () => $("lesson-workspace").scrollIntoView({ behavior: "smooth" }));
+render();

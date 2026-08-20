@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prize2Pride Japanese for Tunisian learners — public dialogue-first Japanese practice with Tunisian Arabic guidance." />
+    <title>Prize2Pride — 日本語 للتونسيين</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <a class="brand" href="#top" aria-label="Prize2Pride home">Prize<span>2</span>Pride</a>
+        <p>日本語 للتونسيين · Japanese for Tunisian learners</p>
+      </header>
+      <section class="hero" id="top">
+        <div>
+          <p class="eyebrow">A0–B2 · dialogue first · public</p>
+          <h1>日本語を、<em>自分の場面</em>で。</h1>
+          <p class="arabic" lang="aeb" dir="rtl">الياباني في المواقف إلي تهمّك — خطوة بخطوة ومن غير حساب.</p>
+          <p>Learn Japanese through short situations for study, everyday life, and projects. Your notes and completion marks remain on this device.</p>
+          <button class="primary" id="start-learning">ابدأ الياباني · Start learning</button>
+        </div>
+        <aside class="privacy-card"><strong>Local by design</strong><span>النتائج والملاحظات تبقى في جهازك.</span><span>No profile. No cloud progress.</span></aside>
+      </section>
+      <section class="compass" aria-labelledby="compass-title">
+        <div><p class="eyebrow">Learning compass</p><h2 id="compass-title">Choose a Japanese route.</h2></div>
+        <div class="levels" id="levels" role="tablist" aria-label="Japanese levels"></div>
+      </section>
+      <section class="workspace" id="lesson-workspace" aria-live="polite">
+        <div class="lesson-list"><p class="eyebrow">Dialogue library</p><h2 id="level-title">A0 · First contact</h2><div id="lesson-buttons"></div></div>
+        <article class="lesson-card">
+          <p class="eyebrow" id="lesson-context"></p>
+          <h2 id="lesson-title"></h2>
+          <p class="arabic" id="lesson-arabic" lang="aeb" dir="rtl"></p>
+          <div class="dialogue" id="dialogue"></div>
+          <div class="controls"><button id="speak-dialogue">聞く · اسمع</button><button id="complete-lesson">完成として記録 · سجّلها كمكمّلة</button></div>
+          <section class="reflection"><p class="eyebrow">Your own Japanese</p><h3>自分の文を準備する</h3><p class="arabic" lang="aeb" dir="rtl">اكتب أو حضّر جملة بالياباني على موقفك. ما فماش جواب جاهز هنا.</p><textarea id="reflection" rows="4" placeholder="日本語で自分の文を書いてみよう…"></textarea><button id="save-reflection">この端末に保存 · خزّن في الجهاز</button><small id="save-status"></small></section>
+        </article>
+      </section>
+      <section class="reading"><div><p class="eyebrow">Reading detective</p><h2>読む前に、手がかりを選ぶ。</h2><p class="arabic" lang="aeb" dir="rtl">قبل ما تقرى، اختار الإشارة إلي تراها أهم. بعد ارجع للنص وفسّر علاش.</p></div><div id="clue-options" class="clues"></div><p id="clue-response" class="response"></p></section>
+      <footer><strong>Prize2Pride</strong><span>Japanese learning starter · Professor Raoued Fadhel</span><span class="arabic" lang="aeb" dir="rtl">التعلّم على جهازك · من غير حساب</span></footer>
+    </main>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

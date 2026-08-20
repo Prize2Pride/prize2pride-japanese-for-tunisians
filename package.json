@@ -1,0 +1,10 @@
+{
+  "name": "prize2pride-japanese-for-tunisians",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/learning.test.mjs"
+  },
+  "license": "MIT"
+}
