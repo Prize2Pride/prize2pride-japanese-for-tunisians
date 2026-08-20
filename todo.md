@@ -4,3 +4,6 @@
 - [x] Establish a public, mobile-first Japanese A0–B2 learning starter with Tunisian Arabic guidance.
 - [x] Add dialogue-first Japanese practice, local progress, selected-device speech controls, and answer-free reflection.
 - [x] Validate the new public project, repository, keyboard access, and responsive behavior.
+- [x] Elevate the Japanese learning interface with a polished responsive editorial design and richer visual learning hierarchy.
+- [x] Validate the refined Japanese experience for keyboard access, local learning controls, and desktop/mobile presentation.
+- [ ] Deploy the Japanese-for-Tunisians application publicly and document the live URL in the repository.
