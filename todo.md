@@ -7,3 +7,7 @@
 - [x] Elevate the Japanese learning interface with a polished responsive editorial design and richer visual learning hierarchy.
 - [x] Validate the refined Japanese experience for keyboard access, local learning controls, and desktop/mobile presentation.
 - [ ] Deploy the Japanese-for-Tunisians application publicly and document the live URL in the repository.
+- [x] Add a bilingual Japanese phrase mosaic for device-local phrase review and reading practice.
+- [x] Validate the Japanese phrase mosaic with automated tests and a responsive browser review.
+- [x] Replace the oversized and visually blurred Japanese learning typography with a restrained, high-clarity composition.
+- [x] Verify crisp Japanese, Tunisian Arabic, and Latin readability at desktop and mobile sizes before publishing the correction.

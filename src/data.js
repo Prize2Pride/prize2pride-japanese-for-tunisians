@@ -20,3 +20,15 @@ export const lessons = [
 ];
 
 export const clues = ["Purpose words such as 目的", "A time or place signal", "A phrase that shows a respectful request"];
+export const phrases = [
+  { id: "a0-greeting", level: "A0", japanese: "はじめまして", tunisian: "تشرفنا", cue: "A respectful first encounter" },
+  { id: "a0-thanks", level: "A0", japanese: "ありがとうございます", tunisian: "يعطيك الصحة", cue: "A clear thank-you" },
+  { id: "a1-request", level: "A1", japanese: "お願いします", tunisian: "من فضلك", cue: "A concise request" },
+  { id: "a1-question", level: "A1", japanese: "どこですか？", tunisian: "وين موجود؟", cue: "A location question" },
+  { id: "a2-invitation", level: "A2", japanese: "行きませんか？", tunisian: "ما نمشيوش؟", cue: "An invitation to join" },
+  { id: "a2-time", level: "A2", japanese: "会いましょう", tunisian: "نتقابلوا", cue: "A shared plan" },
+  { id: "b1-clarify", level: "B1", japanese: "確認したい点があります", tunisian: "عندي نقطة نحب نوضّحها", cue: "A respectful clarification" },
+  { id: "b1-purpose", level: "B1", japanese: "目的を共有します", tunisian: "باش نشارك الهدف", cue: "A project opening" },
+  { id: "b2-evidence", level: "B2", japanese: "根拠を説明します", tunisian: "باش نفسّر الحجج", cue: "An academic justification" },
+  { id: "b2-network", level: "B2", japanese: "連絡を取りましょう", tunisian: "نخليو الاتصال بيناتنا", cue: "A professional continuation" },
+];
