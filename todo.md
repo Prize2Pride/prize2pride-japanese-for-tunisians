@@ -11,3 +11,4 @@
 - [x] Validate the Japanese phrase mosaic with automated tests and a responsive browser review.
 - [x] Replace the oversized and visually blurred Japanese learning typography with a restrained, high-clarity composition.
 - [x] Verify crisp Japanese, Tunisian Arabic, and Latin readability at desktop and mobile sizes before publishing the correction.
+- [x] Audit the public Japanese repository against the complete local project and push any missing source or documentation.
