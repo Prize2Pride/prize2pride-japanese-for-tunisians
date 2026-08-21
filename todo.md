@@ -15,3 +15,5 @@
 - [x] Expand the public Japanese A0–B2 dialogue library to six bilingual, professional scenarios per level.
 - [x] Add an answer-free Japanese grammar reflection to every dialogue lesson with device-local draft continuity.
 - [x] Validate the expanded Japanese curriculum, local grammar drafts, responsive UI, and public repository push.
+- [x] Add a bilingual Japanese study compass for device-local completed lessons, saved phrase cards, and non-empty grammar drafts.
+- [x] Validate the Japanese local study compass and push the verified update to the public repository.
