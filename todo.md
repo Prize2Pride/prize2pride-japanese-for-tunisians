@@ -17,3 +17,5 @@
 - [x] Validate the expanded Japanese curriculum, local grammar drafts, responsive UI, and public repository push.
 - [x] Add a bilingual Japanese study compass for device-local completed lessons, saved phrase cards, and non-empty grammar drafts.
 - [x] Validate the Japanese local study compass and push the verified update to the public repository.
+- [x] Add a bilingual, keyboard-operable filter that shows only Japanese phrase cards marked for local review.
+- [x] Validate the Japanese marked-phrase filter and push the verified update to the public repository.

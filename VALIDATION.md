@@ -13,3 +13,7 @@ The desktop composition keeps the dialogue and reflection workspace distinct. Th
 ## Local Study Compass
 
 The expanded A0–B2 curriculum now presents six dialogue situations per level and a compact study compass beside the level route. It reports only three counts drawn from the current browser’s local record: completed dialogue routes, phrase cards marked for later review, and non-empty grammar drafts. The count cards are descriptive, keyboard-neutral status information; they do not introduce a score, account, network request, or shared learner record. Browser review confirmed the initial 0/30, 0/15, and 0-draft state alongside level selection and the lesson-specific answer-free grammar reflection.
+
+## Marked Phrase Review
+
+The Phrase Mosaic now exposes native **All phrases** and **Marked for review** controls, with Tunisian Arabic labels and an explicit local-mark count. At A0, browser review showed all three cards and a 0-mark state before a learner chooses a card. Selecting one card changed the study compass to 1/15 phrase cards saved and the toolbar to 1 marked locally; activating marked-only review then showed only that locally selected card. The marked-only view is designed to show a bilingual empty state when no current-level cards have been marked. Switching a card’s review mark updates the local study compass rather than sending a record outside the device.
