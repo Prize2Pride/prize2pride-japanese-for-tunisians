@@ -12,3 +12,6 @@
 - [x] Replace the oversized and visually blurred Japanese learning typography with a restrained, high-clarity composition.
 - [x] Verify crisp Japanese, Tunisian Arabic, and Latin readability at desktop and mobile sizes before publishing the correction.
 - [x] Audit the public Japanese repository against the complete local project and push any missing source or documentation.
+- [x] Expand the public Japanese A0–B2 dialogue library to six bilingual, professional scenarios per level.
+- [x] Add an answer-free Japanese grammar reflection to every dialogue lesson with device-local draft continuity.
+- [x] Validate the expanded Japanese curriculum, local grammar drafts, responsive UI, and public repository push.
